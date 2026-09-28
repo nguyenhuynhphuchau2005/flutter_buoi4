@@ -1,0 +1,76 @@
+================================================================================
+          CHÚ THÍCH Ý NGHĨA VÀ CHỨC NĂNG CÁC WIDGET TRONG BÀI TẬP FLUTTER
+================================================================================
+
+1. Scaffold:
+   - Chức năng: Khung sườn màn hình tiêu chuẩn của Flutter.
+   - Ý nghĩa: Cung cấp cấu trúc nền cho ứng dụng (chứa Body, AppBar, Nền màn hình).
+
+2. SafeArea:
+   - Chức năng: Tránh vi phạm vùng hiển thị hệ thống.
+   - Ý nghĩa: Đảm bảo nội dung không bị che bởi tai thỏ (notch), camera lỗ đụng hay thanh trạng thái thiết bị.
+
+3. Center:
+   - Chức năng: Căn giữa Widget con.
+   - Ý nghĩa: Đặt thành phần con vào chính giữa không gian của Widget cha.
+
+4. Container:
+   - Chức năng: Khung chứa đa năng.
+   - Ý nghĩa: Dùng để thiết lập kích thước (width, height), khoảng cách (padding, margin), màu nền, bo góc, đường viền và đổ bóng.
+
+5. SingleChildScrollView:
+   - Chức năng: Tạo khả năng cuộn trang.
+   - Ý nghĩa: Giúp màn hình có thể cuộn lên/down khi danh sách thành phần dài vượt quá kích thước thiết bị (tránh lỗi ngợp giao diện - overflow).
+
+6. Column:
+   - Chức năng: Bố cục hàng dọc.
+   - Ý nghĩa: Sắp xếp các Widget con xếp chồng từ trên xuống dưới.
+
+7. Row:
+   - Chức năng: Bố cục hàng ngang.
+   - Ý nghĩa: Sắp xếp các Widget con nằm ngang từ trái sang phải.
+
+8. Stack:
+   - Chức năng: Bố cục xếp chồng đa lớp (Layering).
+   - Ý nghĩa: Cho phép các Widget đè lên nhau (ví dụ: Avatar đa lớp, Huy hiệu tích xanh đè lên Avatar).
+
+9. Positioned:
+   - Chức năng: Định vị tuyệt đối trong Stack.
+   - Ý nghĩa: Xác định khoảng cách chính xác (top, right, bottom, left) cho phần tử nằm trong Stack.
+
+10. Expanded:
+    - Chức năng: Tự động dãn khoảng trống.
+    - Ý nghĩa: Dùng trong Row/Column để ép phần tử con chiếm hết không gian còn lại hoặc chia tỉ lệ (flex).
+
+11. Text:
+    - Chức năng: Hiển thị văn bản.
+    - Ý nghĩa: Dùng để thể hiện chữ viết, hỗ trợ cấu hình font (fontFamily: Inter, fontSize, fontWeight, color).
+
+12. Icon:
+    - Chức năng: Hiển thị biểu tượng.
+    - Ý nghĩa: Vẽ các icon đồ họa hệ thống (Icons.chevron_left, Icons.check, Icons.star, Icons.mail_outline, ...).
+
+13. SizedBox:
+    - Chức năng: Tạo khoảng trống cố định.
+    - Ý nghĩa: Dùng làm khoảng cách (gap) giữa các thành phần hoặc cố định kích thước khung.
+
+14. Wrap:
+    - Chức năng: Bố cục dòng tự động xuống hàng.
+    - Ý nghĩa: Xếp các phần tử thành hàng ngang và tự động đẩy xuống dòng mới khi hết chỗ (rất phù hợp làm các thẻ Skill Chip).
+
+15. ClipRRect & ClipOval:
+    - Chức năng: Cắt gọt góc phần tử.
+    - Ý nghĩa: ClipRRect bo góc hình chữ nhật; ClipOval cắt phần tử/hình ảnh thành hình tròn hoàn chỉnh.
+
+16. Divider:
+    - Chức năng: Đường kẻ phân cách.
+    - Ý nghĩa: Tạo 1 đường vạch ngang mỏng chia cắt giữa các dòng thông tin liên hệ.
+
+17. DecorationImage & AssetImage:
+    - Chức năng: Quản lý và hiển thị hình ảnh asset.
+    - Ý nghĩa: Load hình ảnh từ thư mục cục bộ `images/` (images/1_1.jpg, images/1_2.jpg) lấp đầy khung hình (fit: BoxFit.cover).
+
+18. BoxDecoration & LinearGradient:
+    - Chức năng: Trang trí mỹ thuật cho Container.
+    - Ý nghĩa: Đổ màu dải chuyển dời (Gradient Ring Avatar), làm viền tròn (shape: BoxShape.circle) và tạo hiệu ứng bóng mờ (boxShadow).
+================================================================================
