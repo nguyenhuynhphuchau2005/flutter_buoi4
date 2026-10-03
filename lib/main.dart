@@ -21,7 +21,8 @@ class MyApp extends StatelessWidget {
       //home: Buoi4Card(),
       // home: CardDemov2(),
       // home: ListTileDemo(),
-      home: GridViewDemo(),
+      // home: GridViewDemo(),
+      home: ListViewDemo(),
     );
   }
 }
@@ -269,6 +270,87 @@ class GridViewDemo extends StatelessWidget {
               ),
             ),
         ],
+      ),
+    );
+  }
+}
+
+// 1. Tạo class chứa thông tin cho 1 card
+class UserInfoItem {
+  final IconData icon;
+  final Color color;
+  final String title;
+  final String subtitle;
+
+  UserInfoItem({
+    required this.icon,
+    required this.color,
+    required this.title,
+    required this.subtitle,
+  });
+}
+
+class ListViewDemo extends StatelessWidget {
+  ListViewDemo({super.key});
+
+  // 2. Tạo danh sách dữ liệu
+  final List<UserInfoItem> items = [
+    UserInfoItem(
+      icon: Icons.person,
+      color: Colors.blue,
+      title: "Nguyễn Huỳnh Phúc Hậu",
+      subtitle: "Sinh viên lớp CMP177",
+    ),
+    UserInfoItem(
+      icon: Icons.phone,
+      color: Colors.green,
+      title: "Điện thoại",
+      subtitle: "0901 234 567",
+    ),
+    UserInfoItem(
+      icon: Icons.email,
+      color: Colors.redAccent,
+      title: "Email",
+      subtitle: "sinhvien@gmail.com",
+    ),
+    UserInfoItem(
+      icon: Icons.school,
+      color: Colors.orange,
+      title: "Khoa đào tạo",
+      subtitle: "Khoa Công nghệ thông tin",
+    ),
+    UserInfoItem(
+      icon: Icons.location_on,
+      color: Colors.purple,
+      title: "Địa chỉ",
+      subtitle: "TP. Hồ Chí Minh",
+    ),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    // 3. Gán dữ liệu vào ListView bằng ListView.builder
+    return Scaffold(
+      appBar: AppBar(title: const Text('Thông tin sinh viên')),
+      body: ListView.builder(
+        padding: const EdgeInsets.all(15.0),
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          final item = items[index];
+
+          return Card(
+            child: ListTile(
+              leading: CircleAvatar(
+                backgroundColor: item.color,
+                child: Icon(item.icon, color: Colors.white),
+              ),
+              title: Text(item.title),
+              subtitle: Text(item.subtitle),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () {},
+            ),
+          );
+        },
       ),
     );
   }
